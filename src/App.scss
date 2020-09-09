@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
+
+$punk: #2c4841;
+$punk-code: #14211d;
+$punk-grey: #929a96;
+$punk-white: #fcfffc;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$maxWidth: 1200px;
+
+body, div, article, section, nav, header, footer, table, ul, ol, li, p, code, q, img {
+    box-sizing: inherit;
+}
+
+input, textarea, label {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $punk;
+    margin: 0 0;
+    font-family: 'Bitter', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    line-height: 2;
+    font-weight: $font-weight-normal;
+    color: #312121;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4 {
+    margin-top: 0;
+}
+h1, h2 {
+    font-weight: $font-weight-bold;
+}
+h1 {
+    color: $punk-white;
+    font-size: 2.25rem;
+}
+h2 {
+    font-size: 1.75rem;
+}
+h3, h4 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-normal;
+}
+
+article, section {
+    margin: 2rem auto;
+    position: relative;
+}
+
+.App {
+    margin: 0 auto;
+    max-width: $maxWidth;
+    display: flex;
+    flex-direction: row;
+}
+
+.UserDetails {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: darken($punk-code, 2.5%);
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    color: $punk-white;
+    transition: transform 220ms ease-out;
+
+    .Column {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        padding: 0.5rem 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    img, .Information, button {
+        display: block;
+        flex-shrink: 0;
+    }
+    .Information {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    img {
+        margin: 0 auto;
+        background: white;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+
+    &LoggedOut {
+        transform: translate(0, -100%);
+    }
+
+    &LoggedIn {
+        transform: translate(0, 0);
+    }
+}
+
+form .FormGroup {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    label {
+        flex-grow: 1;
+        display: block;
+        padding: .5rem 1rem .5rem 0;
+
+        &:last-child, &:nth-child(2n+0) {
+            padding-right: 0;
+        }
+        
+        h3, h4 {
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        input {
+            appearance: none;
+            background-color: #fafafa;
+            border: 1px solid #dddddd;
+            width: 100%;
+            display: block;
+            font-size: 1rem;
+            padding: .5rem;
+            color: $punk-code;
+            border-radius: .25rem;
+        }
+    }
+}
+
+q {
+    color: $punk-grey;
+    padding: .5rem 0 .5rem 2rem;
+    border-left: 3px solid $punk-grey;
+    display: block;
+}
+
+.Nav {
+    padding: 8rem 2rem 2rem 2rem;
+    box-shadow: inset -4px 0 8px 0px rgba(0, 0, 0, 0.2);
+    background: darken($punk, 5%);
+    position: relative;
+    min-width: 220px;
+    min-height: 100vh;
+    width: 20%;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 50vw;
+        background: darken($punk, 5%);
+        height: 100%;
+        content: '';
+        display: block;
+    }
+
+    ul {
+        top: 5rem;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        position: sticky;
+
+        li {
+            a {
+                color: $punk-white;
+            }
+
+            &.active a {
+                color: lighten($punk, 25%);
+            }
+        }
+    }
+}
+
+a {
+    color: #008000;
+
+    &:hover {
+        color: #00b700;
+    }
+}
+
+article {
+    width: 80%;
+    padding: 2rem 2rem 2rem 4rem;
+
+    section {
+        padding: 2rem;
+        box-shadow: inset 0 0 8px 4px rgba(0, 0, 0, 0.2);
+        border-radius: .5rem;
+        background-color: $punk-white;
+        overflow: hidden;
+        margin: 0 auto 4rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            padding-bottom: .6rem;
+            border-bottom: 1px dashed $punk-grey;
+        }
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+pre {
+    position: relative;
+    background-color: $punk-code !important;
+    overflow-x: visible !important;
+
+    &:before, &:after {
+        background: $punk-code;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 2rem;
+        content: '';
+        display: block;
+    }
+
+    &:before {
+        right: 100%;
+    }
+
+    &:after {
+        left: 100%;
+    }
+
+    code {
+        
+    }
+}
+
+button {
+    padding: 1rem 2rem;
+    font-weight: $font-weight-bold;
+    display: block;
+    border-radius: .5rem;
+    background-color: $punk-code;
+    color: $punk-white;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 150ms ease-out; 
+
+    &:hover {
+        background-color: lighten($punk-code, 7.5%);
+    }
+}
