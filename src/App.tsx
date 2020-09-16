@@ -8,7 +8,7 @@ import {
     ExampleOverview,
     ExampleUpdatableExplanation,
 } from './components/examples';
-import UpdatableUserContextProvider from './context/UpdatableUserContext.Provider';
+import UpdatableUserContextProvider from './context/UpdatableUserContext/UpdatableUserContext.Provider';
 import './App.scss';
 
 interface AppProps {}

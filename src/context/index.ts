@@ -1,5 +1,5 @@
-import TinyModeContext from './TinyModeContext';
-import UpdatableUserContext from './UpdatableUserContext';
+import TinyModeContext from './TinyModeContext/TinyModeContext';
+import UpdatableUserContext from './UpdatableUserContext/UpdatableUserContext';
 
 export {
     TinyModeContext,

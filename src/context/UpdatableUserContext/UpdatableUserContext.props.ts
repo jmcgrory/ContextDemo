@@ -1,4 +1,4 @@
-import StringObject from '../lib/StringObject.interface';
+import StringObject from '../../lib/StringObject.interface';
 
 interface UpdatableUserContextProps {
     setUser: (newUser: StringObject) => boolean;

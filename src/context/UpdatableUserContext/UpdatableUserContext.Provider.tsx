@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StringObject from '../lib/StringObject.interface';
+import StringObject from '../../lib/StringObject.interface';
 import UpdatableUserContext from './UpdatableUserContext';
 import UpdatableUserContextProps from './UpdatableUserContext.props';
 
