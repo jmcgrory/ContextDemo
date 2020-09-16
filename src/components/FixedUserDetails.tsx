@@ -6,7 +6,7 @@ const FixedUserDetails = () => (
         {({ deleteUser, user }) => (
             <div className={`UserDetails ${user ? 'UserDetailsLoggedIn' : 'UserDetailsLoggedOut'}`}>
                 <div className={'Column'}>
-                    <img src={'./user.png'} alt={'User Profile'} />
+                    <img src={`${window.location.origin}/user.png`} alt={'User Profile'} />
                     <div className={'Information'}>
                         <strong>{ ( user && user.name ) || '...' }</strong> - { ( user && user.title ) || '...' }
                     </div>

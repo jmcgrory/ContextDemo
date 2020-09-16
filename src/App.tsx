@@ -49,7 +49,7 @@ const App = (props:AppProps) => {
                 }} />
                 <article>
                     <header className="App-header">
-                        <h1>Context Research</h1>
+                        <h1>Context & Hooks</h1>
                     </header>
                     <section id="Overview">
                         <h2>Overview</h2>
