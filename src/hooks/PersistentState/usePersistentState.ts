@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import StringObject from '../../lib/StringObject.interface';
 
-const usePersistedState = (key: string, defaultValue: StringObject) => {
+const usePersistedState = (key: string, defaultValue: number) => {
     const [ state, setState ] = useState(() => {
         const persistedState = window.localStorage.getItem(key);
         return persistedState ? JSON.parse(persistedState) : defaultValue;

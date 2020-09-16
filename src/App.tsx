@@ -5,11 +5,13 @@ import {
     ExampleBasic,
     ExampleConsumerOfTinyContext,
     ExampleConsumerOfUpdatableContext,
+    ExampleCustomHook,
     ExampleOverview,
     ExampleUpdatableExplanation,
 } from './components/examples';
 import UpdatableUserContextProvider from './context/UpdatableUserContext/UpdatableUserContext.Provider';
 import './App.scss';
+import LikeContextProvider from './context/LikeContext/LikeContext.Provider';
 
 interface AppProps {}
 
@@ -20,32 +22,38 @@ const App = (props:AppProps) => {
             key: 0,
             text: 'Overview',
             href: '#Overview',
-            title: 'View Context Research Document Overview'
+            title: 'View Context Research Document Overview',
         },
         {
             key: 1,
             text: 'Basic Example',
             href: '#BasicExample',
-            title: 'View Basic Example'
+            title: 'View Basic Example',
         },
         {
             key: 2,
             text: 'Tiny Mode',
             href: '#TinyMode',
-            title: 'View TinyMode Example'
+            title: 'View TinyMode Example',
         },
         {
             key: 3,
             text: 'Updating Context',
             href: '#UpdatableExplanation',
-            title: 'View Updating Context Information'
+            title: 'View Updating Context Information',
         },
         {
             key: 4,
             text: 'Updatable Example',
             href: '#UpdatableExample',
-            title: 'View Updatable Example'
+            title: 'View Updatable Example',
         },
+        {
+            key: 5,
+            text: 'Basic Custom Hook',
+            href: '#ExampleCustomHook',
+            title: 'View Custom Hook Example',
+        }
     ];
     return (
         <UpdatableUserContextProvider>
@@ -63,6 +71,9 @@ const App = (props:AppProps) => {
                     </TinyModeContext.Provider>
                     <ExampleUpdatableExplanation />
                     <ExampleConsumerOfUpdatableContext />
+                    <LikeContextProvider>
+                        <ExampleCustomHook />
+                    </LikeContextProvider>
                 </article>
             </div>
         </UpdatableUserContextProvider>

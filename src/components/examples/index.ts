@@ -3,6 +3,7 @@ import ExampleConsumerOfUpdatableContext from './ExampleConsumerOfUpdatableConte
 import ExampleUpdatableExplanation from './ExampleUpdatableExplanation';
 import ExampleBasic from './ExampleBasic';
 import ExampleOverview from './ExampleOverview';
+import ExampleCustomHook from './ExampleCustomHook';
 
 export {
     ExampleConsumerOfTinyContext,
@@ -10,4 +11,5 @@ export {
     ExampleUpdatableExplanation,
     ExampleBasic,
     ExampleOverview,
+    ExampleCustomHook,
 }

@@ -218,6 +218,9 @@ article {
         h2 {
             padding-bottom: .6rem;
             border-bottom: 1px dashed $punk-grey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
@@ -262,6 +265,7 @@ button {
     display: block;
     border-radius: .5rem;
     background-color: $punk-code;
+    box-shadow: inset -1px -2px 2px 1px rgba(255, 255, 255, 0.2);
     color: $punk-white;
     appearance: none;
     border: none;
@@ -270,5 +274,28 @@ button {
 
     &:hover {
         background-color: lighten($punk-code, 7.5%);
+    }
+}
+
+.Likes {
+    border: 1px solid lighten($punk-grey, 25%);
+    border-radius: 0.5em;
+    font-size: 0.5em;
+    padding: 0.25em 0.75em;
+    background: lighten($punk-grey, 37.5%);
+    cursor: pointer;
+    transition: 150ms ease-out; 
+
+    &-None {
+        opacity: 0.5;
+        filter: saturate(0)
+    }
+
+    &:hover {
+        background: lighten($punk-grey, 32%);
+    }
+
+    span {
+        padding-right: 0.5em;
     }
 }
